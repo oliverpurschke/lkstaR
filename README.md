@@ -2,14 +2,14 @@
 ![alt tag](https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR.png "Loewenkids Logo")
 
 Installing the package
-================
+------------------
 
 ``` r
 remotes::install_github("oliverpurschke/lkstaR")
 ```
 
 Load required packages
-======================
+------------------
 
 ``` r
 library(haven)
