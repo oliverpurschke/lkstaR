@@ -29,7 +29,7 @@ Loading Data
 
 ``` r
 path_data <- "P:/IMEBI/LöwenKIDS_Studie/8_Studiendaten/8.3_Data_GebKo_Work/8.3.2_Symptomtagebuch/SAS_Datensatz_permanent/"
-lk_data <- read_sas(paste0(path_data, "sta_gesamt10mar21.sas7bdat"))
+lk_data_21_03_10 <- read_sas(paste0(path_data, "sta_gesamt10mar21.sas7bdat"))
 save(lk_data_21_03_10, file = "lk_data_21_03_10.Rdata")
 load("lk_data_21_03_10.Rdata")
 ```
