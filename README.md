@@ -83,7 +83,7 @@ res <- lk_krank_klass(
 )
 ```
 
-Generates acute respiratory episodes (ARE)
+Generating acute respiratory episodes (ARE)
 ------------------
 lk_symp_inter() classifies each entry in the symptom diary to a acute respiratory episodes (ARE). E.g. for the liberal scenario:
 
@@ -98,6 +98,37 @@ Symp_intervalle_lib <- lk_symp_inter(
   write_table = T
 )
 ```
+
+Generating episodes data set
+------------------
+lk_symp_episod() generates episodes data set comprised of time spans for each ARE/ARE-Type. E.g. for the liberal scenario:
+
+``` r
+?lk_symp_inter
+
+Symp_episoden_lib <-
+  lk_symp_episod(lk_dat = Symp_intervalle_lib,
+                 scenario = "lib",
+                 write_table = T)
+```
+
+
+Calculation of outcome variables
+------------------
+lk_symp_outcome() generates a set of outcome variables. E.g. for the liberal scenario:
+
+``` r
+?lk_symp_outcome
+
+Symp_outcome_lib <-
+  lk_symp_outcome(lk_inter_dat = Symp_intervalle_lib,
+                  lk_epi_dat = Symp_episoden_lib,
+                  scenario = "lib",
+                  lebmon = 24,
+                  write_table = T)
+```
+
+
 
 
 
