@@ -1,12 +1,16 @@
-# lkstaR
-Analysis of Loewenkids Symptom Diary in R
+# lkstaR - Analysis of Loewenkids Symptom Diary in R
 ![alt tag](https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR.png "Loewenkids Logo")
 
-
-Generating figures visualizing the match between sPlot 2.1 and TRY 3.0
+Installing the package
 ================
-Oliver Purschke
-18 August, 2017
+
+``` r
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(reshape)
+library(foreach)
+```
 
 This document describes the workflow of generating some figures that visualize the match between (i) global vegetation plot database sPlot version 2.1 and (ii) the global plant trait data base TRY version 3.
 
