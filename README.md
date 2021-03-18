@@ -6,13 +6,15 @@ Installing the package
 
 ``` r
 remotes::install_github("oliverpurschke/lkstaR")
+library(lkstaR)
+library(help=lkstaR)
+?lk_klass
 ```
 
-Load required packages
+Load additional packages
 ------------------
 
 ``` r
-library(lkstaR)
 library(haven)
 library(tidyverse)
 library(lubridate)
@@ -33,15 +35,20 @@ load("lk_data_21_03_10.Rdata")
 ```
 
 
-sPlot species data
+Classification and filtering of symptom diary entries
 ------------------
-
-Rulk_klass
+lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.
+e.g. for 1 until 12 months of life:
 
 ``` r
-load("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Species/sPlot/
-sPlot_2017_08_04/splot_20161025_species_small.Rdata")
-gc()
+lk_lebmon_fieber_klass <- lk_klass(
+  lk_dat = lk_data_21_03_10,
+  #lebmon = 24,
+  lebmon_min = 0,
+  lebmon_max = 12,
+  f_niedrig = 37.5,
+  f_hoch = 38.4
+)
 ```
 
 ``` r
