@@ -5,24 +5,20 @@ Installing the package
 ================
 
 ``` r
-library(ggplot2)
-library(plyr)
-library(dplyr)
-library(reshape)
-library(foreach)
+remotes::install_github("oliverpurschke/lkstaR")
 ```
-
-This document describes the workflow of generating some figures that visualize the match between (i) global vegetation plot database sPlot version 2.1 and (ii) the global plant trait data base TRY version 3.
 
 Load required packages
 ======================
 
 ``` r
-library(ggplot2)
-library(plyr)
-library(dplyr)
-library(reshape)
-library(foreach)
+library(haven)
+library(tidyverse)
+library(lubridate)
+library(openxlsx)
+library(doSNOW)
+library(parallel)
+library(eeptools)
 ```
 
 Loading Data
