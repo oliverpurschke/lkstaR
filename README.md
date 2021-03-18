@@ -104,7 +104,7 @@ Generating episodes data set
 lk_symp_episod() generates episodes data set comprised of time spans for each ARE/ARE-Type. E.g. for the liberal scenario:
 
 ``` r
-?lk_symp_inter
+?lk_symp_episod
 
 Symp_episoden_lib <-
   lk_symp_episod(lk_dat = Symp_intervalle_lib,
