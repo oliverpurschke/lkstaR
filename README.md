@@ -41,9 +41,10 @@ lk_klass() filters records for each id_s in the symptom diary according to a pre
 e.g. for 1 until 12 months of life:
 
 ``` r
+?lk_klass
+
 lk_lebmon_fieber_klass <- lk_klass(
   lk_dat = lk_data_21_03_10,
-  #lebmon = 24,
   lebmon_min = 0,
   lebmon_max = 12,
   f_niedrig = 37.5,
@@ -51,6 +52,52 @@ lk_lebmon_fieber_klass <- lk_klass(
 )
 ```
 
+Classification into acute respiratory A- and B-symptoms of symptom diary entries
+------------------
+lk_krank_klass() classifies each record in the symptom diary into A-symptoms, and counts the number of B-symptoms, according to two scenarios (conservative and liberal).
+
 ``` r
-dim(DT2_small)
+?lk_krank_klass
+
+res <- lk_krank_klass(
+  lk_dat = lk_lebmon_fieber_klass,
+  diag_num = c(1, 2, 3, 4, 5, 6, 9),
+  symp_a_vec = c("keuchen_atmend", "husten_aw"),
+  symp_resp_weitere_vec = c(
+    "husten_tr",
+    "husten_wn",
+    "Nase",
+    "hals"
+  ), 
+  symp_b_lib_vec = c(
+    "husten_tr",
+    "husten_wn",
+    "Nase",
+    "Schuettelfrost",
+    "hals",
+    "appetit",
+    "schlafbeduerfnis",
+    "Anhaenglichkeit"
+  ),
+  write_table = F
+)
 ```
+
+Generates acute respiratory episodes (ARE)
+------------------
+lk_symp_inter() classifies each entry in the symptom diary to a acute respiratory episodes (ARE). E.g. for the liberal scenario:
+
+``` r
+?lk_symp_inter
+
+Symp_intervalle_lib <- lk_symp_inter(
+  lk_dat = res,
+  thresh_inter = 2,
+  thresh_d = 2,
+  scenario = "lib",
+  write_table = T
+)
+```
+
+
+
