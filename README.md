@@ -12,6 +12,7 @@ Load required packages
 ------------------
 
 ``` r
+library(lkstaR)
 library(haven)
 library(tidyverse)
 library(lubridate)
@@ -22,12 +23,20 @@ library(eeptools)
 ```
 
 Loading Data
-============
+------------------
+
+``` r
+path_data <- "P:/IMEBI/LöwenKIDS_Studie/8_Studiendaten/8.3_Data_GebKo_Work/8.3.2_Symptomtagebuch/SAS_Datensatz_permanent/"
+lk_data <- read_sas(paste0(path_data, "sta_gesamt10mar21.sas7bdat"))
+save(lk_data_21_03_10, file = "lk_data_21_03_10.Rdata")
+load("lk_data_21_03_10.Rdata")
+```
+
 
 sPlot species data
 ------------------
 
-Loading a reduced version of 'splot\_20161025\_species', DT2\_small, that just contains the columns 'PlotObservationID', 'species' and 'Relative.cover':
+Rulk_klass
 
 ``` r
 load("/home/oliver/Dokumente/PhD/PostPhD/IDiv/sDiv/sPlot/Analyses/Data/Species/sPlot/
