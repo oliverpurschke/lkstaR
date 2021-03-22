@@ -1,4 +1,4 @@
-# lkstaR - Analysis of Loewenkids Symptom Diary in R
+# lkstaR - Analysis of the Loewenkids Symptom Diary in R
 ![alt tag](https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR_small.png "Loewenkids Logo")
 
 Installing the package
