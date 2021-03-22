@@ -5,6 +5,7 @@ Installing the package
 ================
 
 ``` r
+install.packages("remotes")
 remotes::install_github("oliverpurschke/lkstaR")
 library(lkstaR)
 library(help=lkstaR)
