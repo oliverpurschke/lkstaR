@@ -1,8 +1,6 @@
 # lkstaR - Analysis of the Loewenkids Symptom Diary in R
 ![grafik](https://user-images.githubusercontent.com/12734336/112830367-b3bc0200-9092-11eb-90fc-df4ebb19f132.png)
 
-To cite the package use: https://zenodo.org/badge/DOI/10.5281/zenodo.4643786.svg
-
 
 Installing the package
 ================
