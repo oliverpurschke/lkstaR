@@ -40,7 +40,6 @@ Classification and filtering of symptom diary entries
 ------------------
 lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.
 e.g. for 1 until 12 months of life:
-<<<<<<< HEAD
 
 ``` r
 ?lk_klass
@@ -59,7 +58,6 @@ lk_lebmon_fieber_klass <- lk_klass(
   f_hoch = 38.4
 )
 ```
-<<<<<<< HEAD
 
 Classification into acute respiratory A- and B-symptoms of symptom diary entries
 ------------------
@@ -136,7 +134,6 @@ Symp_outcome_lib <-
                   lebmon = 24,
                   write_table = T)
 ```
-=======
 
 Classification into acute respiratory A- and B-symptoms of symptom diary entries
 ------------------
