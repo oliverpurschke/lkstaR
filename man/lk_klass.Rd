@@ -18,7 +18,7 @@ lk_klass(lk_dat, lebmon_min, lebmon_max, f_niedrig, f_hoch)
 \item{f_hoch}{High fever cut off}
 }
 \value{
-A data.frame including the original symptom diary and additional columns for fever classification (yes/no) and age
+A data.frame including the original symptom diary and the additional columns
 }
 \description{
 lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.

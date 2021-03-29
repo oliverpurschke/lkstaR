@@ -8,7 +8,7 @@
 #' @param f_niedrig Low fever cut off
 #' @param f_hoch High fever cut off
 #'
-#' @return A data.frame including the original symptom diary and additional columns for fever classification (yes/no) and age
+#' @return A data.frame including the original symptom diary and the additional columns
 #' @keywords symptom diary fever classification months of life
 #' @export
 #' @examples
@@ -28,9 +28,9 @@ lk_klass <-
       mutate(lebmon_int =
                between(
                  date_sta,
-                 gebdat_exakt %m+% months(lebmon_min),
-                 gebdat_exakt %m+% months(lebmon_max) - 1
-               )) %>% 
+                 first(gebdat_exakt %m+% months(lebmon_min)),
+                 first(gebdat_exakt %m+% months(lebmon_max) - 1
+               ))) %>% 
       filter(lebmon_int == TRUE) %>%
       ungroup() %>%
       mutate(
