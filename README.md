@@ -48,9 +48,6 @@ e.g. for 1 until 12 months of life:
 ``` r
 ?lk_klass
 
-``` r
-?lk_klass
-
 lk_lebmon_fieber_klass <- lk_klass(
   lk_dat = lk_data_21_03_10,
   lebmon_min = 0,
