@@ -44,8 +44,6 @@ e.g. for 1 until 12 months of life:
 ``` r
 ?lk_klass
 
-=======
-
 ``` r
 ?lk_klass
 
