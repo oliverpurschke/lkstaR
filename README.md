@@ -209,9 +209,3 @@ Symp_outcome_lib <-
                   lebmon = 24,
                   write_table = T)
 ```
-
-
-
-
-
->>>>>>> 1b29a8b745bebb699d6aaa69af13616deae96b69
