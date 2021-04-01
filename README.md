@@ -205,6 +205,6 @@ Symp_outcome_lib <-
   lk_symp_outcome(lk_inter_dat = Symp_intervalle_lib,
                   lk_epi_dat = Symp_episoden_lib,
                   scenario = "lib",
-                  lebmon = 24,
+                  lebmon = 12,
                   write_table = T)
 ```
