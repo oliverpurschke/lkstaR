@@ -3,8 +3,6 @@
 To cite the package use:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4643786.svg)](https://doi.org/10.5281/zenodo.4643786)
 
-![alt tag](https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR_small.png "Loewenkids Logo")
-
 Installing the package
 ================
 
