@@ -93,7 +93,7 @@ lk_symp_inter() classifies each entry in the symptom diary to a acute respirator
 
 ``` r
 
-?lk_symp_inte
+?lk_symp_inter
 
 Symp_intervalle_lib <- lk_symp_inter(
   lk_dat = res,
