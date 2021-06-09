@@ -92,7 +92,8 @@ Generating acute respiratory episodes (ARE)
 lk_symp_inter() classifies each entry in the symptom diary to a acute respiratory episodes (ARE). E.g. for the liberal scenario:
 
 ``` r
-?lk_symp_inter
+
+?lk_symp_inte
 
 Symp_intervalle_lib <- lk_symp_inter(
   lk_dat = res,
@@ -101,6 +102,7 @@ Symp_intervalle_lib <- lk_symp_inter(
   scenario = "lib",
   write_table = T
 )
+
 ```
 
 Generating episodes data set
@@ -128,6 +130,6 @@ Symp_outcome_lib <-
   lk_symp_outcome(lk_inter_dat = Symp_intervalle_lib,
                   lk_epi_dat = Symp_episoden_lib,
                   scenario = "lib",
-                  lebmon = 24,
+                  lebmon = 12,
                   write_table = T)
 ```
