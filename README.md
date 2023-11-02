@@ -50,7 +50,7 @@ e.g. for 1 until 12 months of life:
 ?lk_klass
 
 lk_lebmon_fieber_klass <- lk_klass(
-  lk_dat = lk_data_21_03_10,
+  lk_dat = lk_data_23_05_25,
   lebmon_min = 0,
   lebmon_max = 12,
   f_niedrig = 37.5,
