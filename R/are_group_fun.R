@@ -1,4 +1,4 @@
-#' Helper function to generate acute respiratory episodes 
+#' Helper function to generate acute respiratory episodes
 #'
 #' @description are_group_fun() is used in lk_symp_inter
 #'
@@ -13,7 +13,7 @@
 are_group_fun <- function(var, thresh_d) {
   y <- rle(var) %>%
     "attr<-"("class", "list") %>%
-    as_tibble(.$values, .name_repair = "minimal") %>%
+    as_tibble() %>%
     mutate(
       id = row_number(),
       group_3 = case_when(
