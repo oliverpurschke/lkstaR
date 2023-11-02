@@ -25,22 +25,22 @@ library(parallel)
 library(eeptools)
 ```
 
-Loading Data
+Load Data
 ================
 
 ``` r
 path_data <- "P:/IMEBI/LöwenKIDS_Studie/8_Studiendaten/8.3_Data_GebKo_Work/8.3.2_Symptomtagebuch/SAS_Datensatz_permanent/"
-lk_data_21_03_10 <- read_sas(paste0(path_data, "sta_gesamt10mar21.sas7bdat"))
-save(lk_data_21_03_10, file = "lk_data_21_03_10.Rdata")
-load("lk_data_21_03_10.Rdata")
+lk_data_23_05_25 <- read_sas(paste0(path_data, "sta_gesamt25may23.sas7bdat"))
+save(lk_data_23_05_25, file = "lk_data_23_05_25.Rdata")
+load("lk_data_23_05_25.Rdata")
 ```
+
 Using the package
 ================
 Classification and filtering of symptom diary entries
 ------------------
 lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.
 e.g. for 1 until 12 months of life:
-<<<<<<< HEAD
 
 ``` r
 ?lk_klass
@@ -50,7 +50,6 @@ e.g. for 1 until 12 months of life:
 ``` r
 ?lk_klass
 
->>>>>>> 1b29a8b745bebb699d6aaa69af13616deae96b69
 lk_lebmon_fieber_klass <- lk_klass(
   lk_dat = lk_data_21_03_10,
   lebmon_min = 0,
@@ -91,9 +90,9 @@ res <- lk_krank_klass(
 )
 ```
 
-Generating acute respiratory episodes (ARE)
+Generate acute respiratory episodes (ARE)
 ------------------
-lk_symp_inter() classifies each entry in the symptom diary to a acute respiratory episodes (ARE). E.g. for the liberal scenario:
+lk_symp_inter() classifies each entry in the symptom diary into acute respiratory episodes (ARE). E. g. for the liberal scenario:
 
 ``` r
 ?lk_symp_inter
@@ -107,9 +106,9 @@ Symp_intervalle_lib <- lk_symp_inter(
 )
 ```
 
-Generating episodes data set
+Generate episodes data set
 ------------------
-lk_symp_episod() generates episodes data set comprised of time spans for each ARE/ARE-Type. E.g. for the liberal scenario:
+lk_symp_episod() generates an episodes data set containing time spans for each ARE/ARE-Type. E. g. for the liberal scenario:
 
 ``` r
 ?lk_symp_episod
@@ -121,7 +120,7 @@ Symp_episoden_lib <-
 ```
 
 
-Calculation of outcome variables
+Calculate outcome variables
 ------------------
 lk_symp_outcome() generates a set of outcome variables. E.g. for the liberal scenario:
 
