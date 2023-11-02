@@ -43,14 +43,14 @@ Using the package
 Classification and filtering of symptom diary entries
 ------------------
 lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.
-e.g. for 1 until 12 months of life:
+e. g. for 1 until 12 months of life:
 
 
 ``` r
 ?lk_klass
 
 lk_lebmon_fieber_klass <- lk_klass(
-  lk_dat = lk_data_21_03_10,
+  lk_dat = lk_data_23_05_25,
   lebmon_min = 0,
   lebmon_max = 12,
   f_niedrig = 37.5,
@@ -123,7 +123,7 @@ Symp_episoden_lib <-
 
 Calculate outcome variables
 ------------------
-lk_symp_outcome() generates a set of outcome variables. E.g. for the liberal scenario:
+lk_symp_outcome() generates a set of outcome variables. E. g. for the liberal scenario:
 
 ``` r
 ?lk_symp_outcome
