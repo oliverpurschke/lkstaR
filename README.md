@@ -1,6 +1,6 @@
 # lkstaR - Analysis of the Loewenkids Symptom Diary in R <img src='https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR_small.png' align="center" height="330"/>
 
-To cite the package use
+To cite the package use:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4915826.svg)](https://doi.org/10.5281/zenodo.4915826)
 
