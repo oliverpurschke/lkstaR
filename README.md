@@ -1,6 +1,6 @@
 # lkstaR - Analysis of the Loewenkids Symptom Diary in R <img src='https://github.com/oliverpurschke/lkstaR/blob/main/lkstaR_small.png' align="center" height="330"/>
 
-To cite the package use:
+To cite the package use
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4915826.svg)](https://doi.org/10.5281/zenodo.4915826)
 
@@ -40,11 +40,12 @@ load("lk_data_23_05_25.Rdata")
 
 Using the package
 ================
+
 Classification and filtering of symptom diary entries
 ------------------
+
 lk_klass() filters records for each id_s in the symptom diary according to a predefined duration (months of living) and classifies each entry according to predefined fever categories. In addition, age (in days as well as in months of life) for each individual are calculated.
 e. g. for 1 until 12 months of life:
-
 
 ``` r
 ?lk_klass
@@ -60,6 +61,7 @@ lk_lebmon_fieber_klass <- lk_klass(
 
 Classification of symptom diary entries into acute respiratory A- and B-symptoms
 ------------------
+
 lk_krank_klass() classifies each record in the symptom diary into A-symptoms, and counts the number of B-symptoms, according to two scenarios (conservative and liberal).
 
 ``` r
@@ -91,6 +93,7 @@ res <- lk_krank_klass(
 
 Generate acute respiratory episodes (ARE)
 ------------------
+
 lk_symp_inter() classifies each entry in the symptom diary into acute respiratory episodes (ARE). E. g. for the liberal scenario:
 
 ``` r
@@ -109,6 +112,7 @@ Symp_intervalle_lib <- lk_symp_inter(
 
 Generate episodes data set
 ------------------
+
 lk_symp_episod() generates an episodes data set containing time spans for each ARE/ARE-Type. E. g. for the liberal scenario:
 
 ``` r
@@ -120,9 +124,9 @@ Symp_episoden_lib <-
                  write_table = T)
 ```
 
-
 Calculate outcome variables
 ------------------
+
 lk_symp_outcome() generates a set of outcome variables. E. g. for the liberal scenario:
 
 ``` r
